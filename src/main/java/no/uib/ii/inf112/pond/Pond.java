@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import no.uib.ii.inf112.pond.impl.Duck;
+
 public class Pond {
 	private double x, y;
 	private double width, height;
@@ -11,7 +13,7 @@ public class Pond {
 	public Pond(int w, int h) {
 		this.width = w;
 		this.height = h;
-		objs.add(new Duck(new Position(0, 0), 25));
+		objs.add(new Duck(Position.create(0, 0), 25));
 	}
 
 	public List<PondObject> objs = new ArrayList<>();

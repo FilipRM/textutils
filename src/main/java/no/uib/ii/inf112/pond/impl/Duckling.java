@@ -1,5 +1,6 @@
-package no.uib.ii.inf112.pond;
+package no.uib.ii.inf112.pond.impl;
 
+import no.uib.ii.inf112.pond.Position;
 
 public class Duckling extends Duck {
 	public Duckling(Position pos, double size) {

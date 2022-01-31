@@ -1,4 +1,8 @@
-package no.uib.ii.inf112.pond;
+package no.uib.ii.inf112.pond.impl;
+
+import no.uib.ii.inf112.pond.Pond;
+import no.uib.ii.inf112.pond.PondObject;
+import no.uib.ii.inf112.pond.Position;
 
 /**
  * A duck class – recipe for making duck objects.
@@ -15,7 +19,7 @@ public class Duck implements PondObject {
 		pos.move(2, 0);
 		if (stepCount++ > 10) {
 			stepCount = 0;
-			pond.add(new Duckling(pos, size / 5));
+			pond.add(new Duckling(pos.move(-1, 0), size / 5));
 		}
 	}
 

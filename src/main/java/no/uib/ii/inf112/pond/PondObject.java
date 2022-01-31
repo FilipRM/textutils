@@ -8,12 +8,27 @@ public interface PondObject {
 	 */
 	void step(Pond pond);
 
+	/**
+	 * @return X position
+	 */
 	double getX();
 
+	/**
+	 * @return Y position
+	 */
 	double getY();
 
+	/**
+	 * @return the size
+	 */
 	double getSize();
 
+	/**
+	 * move it!
+	 * 
+	 * @param x
+	 * @param y
+	 */
 	void moveTo(double x, double y);
 
 }

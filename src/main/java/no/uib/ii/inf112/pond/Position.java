@@ -1,32 +1,19 @@
 package no.uib.ii.inf112.pond;
 
-public class Position {
-	private double x;
-	private double y;
+import no.uib.ii.inf112.pond.impl.PositionImpl;
 
-	public Position(double x, double y) {
-		this.setX(x);
-		this.setY(y);
-	}
+public interface Position {
 
-	public double getX() {
-		return x;
+	static Position create(double x, double y) {
+		return new PositionImpl(x, y);
 	}
+	public double getX();
 
-	public void setX(double x) {
-		this.x = x;
-	}
+	public Position setX(double x);
 
-	public double getY() {
-		return y;
-	}
+	public double getY();
 
-	public void setY(double y) {
-		this.y = y;
-	}
-	
-	public void move(double dx, double dy) {
-		x = x + dx;
-		y = y + dy;
-	}
+	public Position setY(double y);
+
+	public Position move(double dx, double dy);
 }
