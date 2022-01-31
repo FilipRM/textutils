@@ -9,6 +9,6 @@ public class Duckling extends Duck {
 
 	
 	public void step() {
-		pos.move(2, 0);
+		pos.move(-1, 0);
 	}
 }

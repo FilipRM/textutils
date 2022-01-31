@@ -16,7 +16,7 @@ public class Duck implements PondObject {
 	protected Position pos;
 
 	public void step(Pond pond) {
-		pos.move(2, 0);
+		pos.move(-1, 0);
 		if (stepCount++ > 10) {
 			stepCount = 0;
 			pond.add(new Duckling(pos.move(-1, 0), size / 5));

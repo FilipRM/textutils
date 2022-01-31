@@ -42,7 +42,9 @@ public class Pond {
 
 			int k = 0;
 			for (PondObject o : pond.objs) {
-				int x = 90 - (int) ((o.getX() / 2) % 80);
+				int x = (int) (o.getX() % 96);
+				if(x < 0)
+					x += 96;
 				x = Math.max(0, Math.min(128, x + k++));
 				if (o.getSize() > 10)
 					chars[x] = "🦆";
