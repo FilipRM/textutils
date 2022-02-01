@@ -19,22 +19,27 @@ public abstract class TestAligner {
 
 	@Test
 	void testCenter() {
-
+		assertEquals("  A  ", aligner.center("A", 5));
+		assertEquals(" foo ", aligner.center("foo", 5));
 	}
 
 	@Test
 	void testFlushRight() {
-
+		assertEquals("    A", aligner.flushRight("A", 5));
+		assertEquals("  foo", aligner.flushRight("foo", 5));
+		assertEquals("Hei eg heiter Eirik", aligner.flushRight("Hei eg heiter Eirik", 2));
 	}
 
 	@Test
 	void testFlushLeft() {
-
+		assertEquals("A    ", aligner.flushLeft("A", 5));
+		assertEquals("foo  ", aligner.flushLeft("foo", 5));
+		assertEquals("Hei eg heiter Eirik", aligner.flushLeft("Hei eg heiter Eirik", 2));
 	}
 
 	@Test
 	void testJustify() {
-
+		assertEquals("fee   fie   foo", aligner.justify("fee fie foo", 15));
 	}
 }
 
