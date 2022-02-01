@@ -15,7 +15,7 @@ public class TestTest {
 			return " ".repeat(extra) + text + " ".repeat(extra);
 		}
 
-		//s
+		// s
 		public String flushRight(String text, int width) {
 			if(text.length() > width) {
 				return text;
