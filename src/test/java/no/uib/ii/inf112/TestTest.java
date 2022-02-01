@@ -46,6 +46,7 @@ public class TestTest {
 
 
 	@Test
+	// blablalba
 	void testCenter() {
 		assertEquals("  A  ", aligner.center("A", 5));
 		assertEquals(" foo ", aligner.center("foo", 5));
